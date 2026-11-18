@@ -13,7 +13,7 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "react-jsx",
-    "types": ["webpack-env"]
+    "types": ["jest", "webpack-env"]
   },
   "include": ["src", "webpack.config.cjs", "tailwind.config.cjs", "postcss.config.cjs"]
 }
