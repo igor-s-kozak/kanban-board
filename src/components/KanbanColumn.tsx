@@ -1,14 +1,13 @@
-import type { LucideIcon } from "lucide-react";
 import { Plus } from "lucide-react";
 import { TaskCard } from "./TaskCard";
 import type { Task, TaskStatus } from "../types/task";
-import { FC, SVGProps } from "react";
+import { FC } from "react";
 
 
 type KanbanColumnProps = {
   status: TaskStatus;
   title: string;
-  icon: FC<SVGProps<SVGSVGElement>>;
+  icon: FC;
   tasks: Task[];
   onAdd: (status: Extract<TaskStatus, 'todo'>) => void;
   onDelete: (taskId: number) => void;

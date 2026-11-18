@@ -1,5 +1,5 @@
-import { FC, SVGProps, useEffect, useMemo, useState } from 'react';
-import { Frown, Ghost, Laugh, Search, Smile } from 'lucide-react';
+import { FC, useEffect, useMemo, useState } from 'react';
+import { Search } from 'lucide-react';
 import { KanbanColumn } from './components/KanbanColumn';
 import { TaskModal, type TaskDraft } from './components/TaskModal';
 import { filterTasks, sortTasks, STATUS_ORDER } from './features/task-utils';
@@ -11,7 +11,7 @@ const STORAGE_KEY = 'ip-kanban.tasks.v1';
 type ColumnConfig = {
   status: TaskStatus;
   title: string;
-  icon: FC<SVGProps<SVGSVGElement>>;
+  icon: FC;
 };
 
 const COLUMNS: ColumnConfig[] = [
