@@ -1,5 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin")
 
 module.exports = (_, argv) => {
   const isProduction = argv.mode === "production";
@@ -40,6 +41,14 @@ module.exports = (_, argv) => {
     plugins: [
       new HtmlWebpackPlugin({
         template: path.resolve(__dirname, "index.html"),
+      }),
+      new CopyWebpackPlugin({
+        patterns: [
+          {
+            from: path.resolve(__dirname, "public/tasks.json"),
+            to: "tasks.json",
+          },
+        ],
       }),
     ],
 
