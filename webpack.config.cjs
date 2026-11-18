@@ -13,7 +13,7 @@ module.exports = (_, argv) => {
       path: path.resolve(__dirname, "dist"),
       filename: "assets/[name].[contenthash].js",
       clean: true,
-      publicPath: isProduction ? "./" : "/",
+      publicPath: isProduction ? "/kanban-board/" : "/",
     },
 
     resolve: {
