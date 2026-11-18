@@ -44,7 +44,7 @@ export default function App() {
       }
 
       try {
-        const response = await fetch('./tasks.json');
+        const response = await fetch('/tasks.json');
         if (!response.ok) throw new Error('Failed to load tasks.json');
         const parsed = (await response.json()) as Task[];
         if (!cancelled) setTasks(parsed);
