@@ -23,7 +23,7 @@ export function TaskCard({ task, onDelete, onEdit, onDragStart }: TaskCardProps)
         overdue ? 'border-[#FC3639]' : 'border-transparent',
       ].join(' ')}
     >
-      <div className="flex flex-col gap-2 pr-16">
+      <div className="flex flex-col gap-2">
         <TaskRow label="Начало:" value={formatTaskDate(task.startDay)} />
         <TaskRow
           label="Окончание:"
@@ -74,8 +74,8 @@ function TaskRow({
 }) {
   return (
     <div className="flex min-w-0 items-center gap-4 overflow-hidden">
-      <span className="shrink-0 text-white/60">{label}</span>
-      <span className={`min-w-0 flex-1 truncate font-bold leading-[22px] ${valueClassName}`}>{value}</span>
+      <span className="self-baseline shrink-0 text-white/60">{label}</span>
+      <span className={`min-w-0 flex-1 font-bold leading-[22px] ${valueClassName}`}>{value}</span>
     </div>
   );
 }

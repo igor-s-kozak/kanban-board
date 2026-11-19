@@ -29,7 +29,7 @@ export function KanbanColumn({
 }: KanbanColumnProps) {
   return (
     <section
-      className="min-w-0 rounded-[4px] bg-black/70 px-4 py-8 shadow-panel"
+      className="min-w-80 max-w-sm rounded-[4px] bg-black/70 px-4 py-8 shadow-panel"
       onDragOver={(event) => event.preventDefault()}
       onDrop={(event) => {
         event.preventDefault();

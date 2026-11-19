@@ -11,7 +11,10 @@ module.exports = {
       },
       boxShadow: {
         panel: '0 12px 30px rgba(0, 0, 0, 0.18)'
-      }
+      },
+      screens: {
+      '3xl': '1920px',
+    },
     }
   },
   plugins: []
